@@ -1,0 +1,12 @@
+{% extends 'gamepages/base.html' %}
+
+{% block body %}
+    {% for item in inputs_list %}
+    <div>
+        {{ item.story }}
+        {{ item.input_type }}
+        {{ item.order }}
+        {{ item.id }}
+    </div>
+    {% endfor %}
+{% endblock %}

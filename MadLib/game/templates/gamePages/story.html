@@ -1,0 +1,11 @@
+{% extends 'gamepages/base.html' %}
+
+{% block body %}
+    <div class="container">
+        <h3>{{ story_title }}</h3>
+        <hr>
+        <br>
+        <p>{{ filled_story|safe }}</p>
+    </div>
+{% endblock %}
+

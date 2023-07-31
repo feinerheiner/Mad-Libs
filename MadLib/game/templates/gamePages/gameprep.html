@@ -1,0 +1,32 @@
+{% extends 'gamepages/base.html' %}
+{#{% load widget_tweaks %}#}
+
+
+{% block body %}
+    <div class="container" style="color: #346876">
+        <h2 class="text-center">
+            {{ story.title }}
+        </h2>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+        <br>
+        <br>
+            <div class="text-center" style="font-weight: bold; ">
+                Please enter the fallowing:
+            </div>
+        <br>
+        <br>
+            {% for field in form %}
+                <div class="form-group text-center">
+                    <div>{{ field.label }}</div>
+                    <div>{{ field }}</div>
+                    <hr>
+                </div>
+            {% endfor %}
+            <div class="text-center">
+                <button type="submit" class="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,16 @@
+{% extends 'gamePages/base.html' %}
+
+<h1>This is a test</h1>
+{% block body %}
+
+    <h1 class="text-center">Please select one of the fallowing stories</h1>
+    <hr>
+    <div class="container">
+        {% for link in stories %}
+            <div>
+                <a class="btn-primary" href="{% url 'pickGame' link.id %}" style="font-weight: bold; color: #346876">{{ link.title }}</a>
+            </div>
+            <hr>
+        {% endfor %}
+    </div>
+{% endblock %}
